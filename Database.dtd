@@ -1,13 +1,8 @@
 <!-- Dichiarazione della DTD. Ogni elemento contiene: coordinate GPS, parole chiave, testo descrittivo, URL a risorse multimediali esterne. -->
 <!ELEMENT contenuti (contenuto)+>
-<!ELEMENT contenuto (coordinateGPS, paroleChiave+, (testodescrittivo | linkEsterno)+)>
-<!ATTLIST contenuto
-  coordinateGPS CDATA #REQUIRED
-  paroleChiave CDATA #REQUIRED
-  testodescrittivo CDATA #IMPLIED
-  linkEsterno CDATA #IMPLIED
->
-<!ELEMENT coordinateGPS (#PCDATA)>
+<!ELEMENT contenuto (coordinateGPSlat, coordinateGPSlong, paroleChiave+, (testodescrittivo | linkEsterno)+)>
+<!ELEMENT coordinateGPSlat (#PCDATA)> <!-- Latitudine -->
+<!ELEMENT coordinateGPSlong (#PCDATA)> <!-- Longitudine -->
 <!ELEMENT paroleChiave (#PCDATA)>
 <!ELEMENT testodescrittivo (#PCDATA)>
 <!ELEMENT linkEsterno (#PCDATA)>
