@@ -1,7 +1,7 @@
 <?xml version ="1.0" ?>
 <!DOCTYPE contenuti SYSTEM "Database.dtd">
 <contenuti>
-  <contenuto>
+  <contenuto id="01">
     <coordinateGPSlat>44.137734</coordinateGPSlat>
     <coordinateGPSlong>12.240359</coordinateGPSlong>
     <paroleChiave>Ristorante</paroleChiave>
@@ -10,14 +10,14 @@
     <testoDescrittivo>Ristorante Pizzeria La Rocca</testoDescrittivo>
     <linkEsterno>http://www.pizzerialarocca.net/</linkEsterno>
   </contenuto>
-  <contenuto>
+  <contenuto id="02">
     <coordinateGPSlat>44.140845</coordinateGPSlat>
     <coordinateGPSlong>12.247547</coordinateGPSlong>
     <paroleChiave>Pizzeria</paroleChiave>
     <paroleChiave>Lucullo</paroleChiave>
     <testoDescrittivo>Pizzeria Lucullo</testoDescrittivo>
   </contenuto>
-  <contenuto>
+  <contenuto id="03">
     <coordinateGPSlat>44.143809</coordinateGPSlat>
     <coordinateGPSlong>12.248674</coordinateGPSlong>
     <paroleChiave>Ristorante</paroleChiave>
@@ -26,7 +26,7 @@
     <testoDescrittivo>America Graffiti Diner Restaurant Cesena</testoDescrittivo>
     <linkEsterno>http://www.americagraffiti.it/</linkEsterno>
   </contenuto>
-  <contenuto>
+  <contenuto id="04">
     <coordinateGPSlat>44.135037</coordinateGPSlat>
     <coordinateGPSlong>12.238410</coordinateGPSlong>
     <paroleChiave>Ristorante</paroleChiave>
@@ -35,14 +35,14 @@
     <testoDescrittivo>Pizzeria La Stalla</testoDescrittivo>
     <linkEsterno>http://www.ristorantelastalla.eu/</linkEsterno>
   </contenuto>
-  <contenuto>
+  <contenuto id="05">
     <coordinateGPSlat>44.135037</coordinateGPSlat>
     <coordinateGPSlong>12.238410</coordinateGPSlong>
     <paroleChiave>Pizzeria</paroleChiave>
     <paroleChiave>Portico</paroleChiave>
     <testoDescrittivo>Pizzeria Il Portico</testoDescrittivo>
   </contenuto>
-  <contenuto>
+  <contenuto id="06">
     <coordinateGPSlat>44.145927</coordinateGPSlat>
     <coordinateGPSlong>12.214123</coordinateGPSlong>
     <paroleChiave>Ristorante</paroleChiave>
@@ -51,14 +51,14 @@
     <testoDescrittivo>Ristorante Quel Castello Di Diegaro</testoDescrittivo>
     <linkEsterno>http://www.quelcastello.it/it/</linkEsterno>
   </contenuto>
-  <contenuto>
+  <contenuto id="07">
     <coordinateGPSlat>44.138042</coordinateGPSlat>
     <coordinateGPSlong>12.238713</coordinateGPSlong>
     <paroleChiave>Gelateria</paroleChiave>
     <paroleChiave>Marilena</paroleChiave>
     <testoDescrittivo>Gelateria Marilena</testoDescrittivo>
   </contenuto>
-  <contenuto>
+  <contenuto id="08">
     <coordinateGPSlat>44.136302</coordinateGPSlat>
     <coordinateGPSlong>12.248637</coordinateGPSlong>
     <paroleChiave>Gelateria</paroleChiave>
@@ -67,7 +67,7 @@
     <testoDescrittivo>Puro e Bio</testoDescrittivo>
     <linkEsterno>http://gelatieri-indipendenti.com/</linkEsterno>
   </contenuto>
-  <contenuto>
+  <contenuto id="09">
     <coordinateGPSlat>44.142631</coordinateGPSlat>
     <coordinateGPSlong>12.251201</coordinateGPSlong>
     <paroleChiave>Gelateria</paroleChiave>
@@ -75,7 +75,7 @@
     <testoDescrittivo>La Cremeria</testoDescrittivo>
     <linkEsterno>http://gelatieri-indipendenti.com/</linkEsterno>
   </contenuto>
-  <contenuto>
+  <contenuto id="10">
     <coordinateGPSlat>44.141830</coordinateGPSlat>
     <coordinateGPSlong>12.239507</coordinateGPSlong>
     <paroleChiave>Bar</paroleChiave>
@@ -83,14 +83,14 @@
     <testoDescrittivo>L'Ex Cafe'</testoDescrittivo>
     <linkEsterno>http://www.excafe.it/</linkEsterno>
   </contenuto>
-  <contenuto>
+  <contenuto id="11">
     <coordinateGPSlat>44.135855</coordinateGPSlat>
     <coordinateGPSlong>12.247575</coordinateGPSlong>
     <paroleChiave>Bar</paroleChiave>
     <paroleChiave>Roma</paroleChiave>
     <testoDescrittivo>Bar Roma</testoDescrittivo>
   </contenuto>
-  <contenuto>
+  <contenuto id="12">
     <coordinateGPSlat>44.137888</coordinateGPSlat>
     <coordinateGPSlong>12.243637</coordinateGPSlong>
     <paroleChiave>Bar</paroleChiave>
