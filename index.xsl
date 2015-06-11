@@ -71,7 +71,7 @@
             <p>Eugenio Severi</p>
             <p>Ludovico de Nittis</p>
         </footer>
-        <script type="text/javascript" src="myscript.js"></script>
+        <script type="text/javascript" src="myscript.js">javascript</script>
     </body>
 </html>
 </xsl:template>
