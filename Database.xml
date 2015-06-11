@@ -7,7 +7,7 @@
     <paroleChiave>Ristorante</paroleChiave>
     <paroleChiave>Pizzeria</paroleChiave>
     <paroleChiave>Rocca</paroleChiave>
-    <testodescrittivo>Ristorante Pizzeria La Rocca</testodescrittivo>
+    <testoDescrittivo>Ristorante Pizzeria La Rocca</testoDescrittivo>
     <linkEsterno>http://www.pizzerialarocca.net/</linkEsterno>
   </contenuto>
   <contenuto>
@@ -15,7 +15,7 @@
     <coordinateGPSlong>12.247547</coordinateGPSlong>
     <paroleChiave>Pizzeria</paroleChiave>
     <paroleChiave>Lucullo</paroleChiave>
-    <testodescrittivo>Pizzeria Lucullo</testodescrittivo>
+    <testoDescrittivo>Pizzeria Lucullo</testoDescrittivo>
   </contenuto>
   <contenuto>
     <coordinateGPSlat>44.143809</coordinateGPSlat>
@@ -23,7 +23,7 @@
     <paroleChiave>Ristorante</paroleChiave>
     <paroleChiave>America</paroleChiave>
     <paroleChiave>Graffiti</paroleChiave>
-    <testodescrittivo>America Graffiti Diner Restaurant Cesena</testodescrittivo>
+    <testoDescrittivo>America Graffiti Diner Restaurant Cesena</testoDescrittivo>
     <linkEsterno>http://www.americagraffiti.it/</linkEsterno>
   </contenuto>
   <contenuto>
@@ -32,7 +32,7 @@
     <paroleChiave>Ristorante</paroleChiave>
     <paroleChiave>Pizzeria</paroleChiave>
     <paroleChiave>Stalla</paroleChiave>
-    <testodescrittivo>Pizzeria La Stalla</testodescrittivo>
+    <testoDescrittivo>Pizzeria La Stalla</testoDescrittivo>
     <linkEsterno>http://www.ristorantelastalla.eu/</linkEsterno>
   </contenuto>
   <contenuto>
@@ -40,7 +40,7 @@
     <coordinateGPSlong>12.238410</coordinateGPSlong>
     <paroleChiave>Pizzeria</paroleChiave>
     <paroleChiave>Portico</paroleChiave>
-    <testodescrittivo>Pizzeria Il Portico</testodescrittivo>
+    <testoDescrittivo>Pizzeria Il Portico</testoDescrittivo>
   </contenuto>
   <contenuto>
     <coordinateGPSlat>44.145927</coordinateGPSlat>
@@ -48,7 +48,7 @@
     <paroleChiave>Ristorante</paroleChiave>
     <paroleChiave>Pizzeria</paroleChiave>
     <paroleChiave>Castello</paroleChiave>
-    <testodescrittivo>Ristorante Quel Castello Di Diegaro</testodescrittivo>
+    <testoDescrittivo>Ristorante Quel Castello Di Diegaro</testoDescrittivo>
     <linkEsterno>http://www.quelcastello.it/it/</linkEsterno>
   </contenuto>
   <contenuto>
@@ -56,7 +56,7 @@
     <coordinateGPSlong>12.238713</coordinateGPSlong>
     <paroleChiave>Gelateria</paroleChiave>
     <paroleChiave>Marilena</paroleChiave>
-    <testodescrittivo>Gelateria Marilena</testodescrittivo>
+    <testoDescrittivo>Gelateria Marilena</testoDescrittivo>
   </contenuto>
   <contenuto>
     <coordinateGPSlat>44.136302</coordinateGPSlat>
@@ -64,7 +64,7 @@
     <paroleChiave>Gelateria</paroleChiave>
     <paroleChiave>Puro</paroleChiave>
     <paroleChiave>Bio</paroleChiave>
-    <testodescrittivo>Puro e Bio</testodescrittivo>
+    <testoDescrittivo>Puro e Bio</testoDescrittivo>
     <linkEsterno>http://gelatieri-indipendenti.com/</linkEsterno>
   </contenuto>
   <contenuto>
@@ -72,7 +72,7 @@
     <coordinateGPSlong>12.251201</coordinateGPSlong>
     <paroleChiave>Gelateria</paroleChiave>
     <paroleChiave>Cremeria</paroleChiave>
-    <testodescrittivo>La Cremeria</testodescrittivo>
+    <testoDescrittivo>La Cremeria</testoDescrittivo>
     <linkEsterno>http://gelatieri-indipendenti.com/</linkEsterno>
   </contenuto>
   <contenuto>
@@ -80,7 +80,7 @@
     <coordinateGPSlong>12.239507</coordinateGPSlong>
     <paroleChiave>Bar</paroleChiave>
     <paroleChiave>Ex Cafe</paroleChiave>
-    <testodescrittivo>L'Ex Cafe'</testodescrittivo>
+    <testoDescrittivo>L'Ex Cafe'</testoDescrittivo>
     <linkEsterno>http://www.excafe.it/</linkEsterno>
   </contenuto>
   <contenuto>
@@ -88,14 +88,14 @@
     <coordinateGPSlong>12.247575</coordinateGPSlong>
     <paroleChiave>Bar</paroleChiave>
     <paroleChiave>Roma</paroleChiave>
-    <testodescrittivo>Bar Roma</testodescrittivo>
+    <testoDescrittivo>Bar Roma</testoDescrittivo>
   </contenuto>
   <contenuto>
     <coordinateGPSlat>44.137888</coordinateGPSlat>
     <coordinateGPSlong>12.243637</coordinateGPSlong>
     <paroleChiave>Bar</paroleChiave>
     <paroleChiave>Capitano</paroleChiave>
-    <testodescrittivo>Bar Capitano</testodescrittivo>
+    <testoDescrittivo>Bar Capitano</testoDescrittivo>
     <linkEsterno>http://www.barcapitano.it/</linkEsterno>
   </contenuto>
 </contenuti>
