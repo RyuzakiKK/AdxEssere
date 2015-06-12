@@ -47,6 +47,10 @@ div > label  {
     font: 16px "Georgia";
 }
 
+#searchresult > ul > li {
+    padding: 20px;
+}
+
 #searchresult > ul > li > a {
     text-decoration: none;
 }
@@ -55,7 +59,7 @@ div > label  {
     display: none;
 }
 
-.lat, .long {
+.lat, .long, .keyword {
     display: none;
 }
 
