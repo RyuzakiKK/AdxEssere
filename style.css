@@ -1,3 +1,8 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
 header {
 	margin: 10px;
     width: 100%;
