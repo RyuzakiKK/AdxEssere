@@ -33,7 +33,7 @@
                     <h1>Ricerca nelle vicinanze (GPS)</h1>
                     <label for="limitdistance">Limita la distanza a metri</label>
                     <select name="limitdistance" id="limitdistance">
-						<option value="80000">80000</option> <!-- Debug -->
+                        <option value="80000">80000</option> <!-- Debug -->
                         <option value="5000">5000</option>
                         <option value="1000">1000</option>
                         <option value="500">500</option>
@@ -43,6 +43,7 @@
                 </div>
             </section>
             <section id="searchresult">
+                <p id="error"></p>
                 <ul>
                     <xsl:for-each select="contenuti/contenuto">
                         <li> <xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute>
@@ -57,14 +58,14 @@
                             <p><xsl:value-of select="."/></p>
                         </xsl:for-each>
                         <xsl:for-each select="linkEsterno">
-							<a>
-								<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-								<xsl:value-of select="."/>
-							</a>
+                            <a>
+                                <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+                                <xsl:value-of select="."/>
+                            </a>
                         </xsl:for-each>
                         </li>
                     </xsl:for-each>
-				</ul>
+                </ul>
             </section>
         </div>
         <footer>

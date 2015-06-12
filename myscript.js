@@ -5,20 +5,28 @@ function keyword() {
         return;
     }
     var x = document.getElementsByClassName("locale");
+    var empty = true;
     for(var i = 0; i < x.length; i++) {
         var pKeyword = x[i].getElementsByClassName("keyword");
         var matched = false;
         for (var j = 0; j < pKeyword.length && !matched; j++) {
-            if (pKeyword[j].innerHTML.indexOf(word) > -1) {
+            if (pKeyword[j].innerHTML.toLowerCase().indexOf(word.toLowerCase()) > -1) {
                 matched = true;
+                empty = false;
             }
         }
         if (matched) {
             x[i].getElementsByClassName("distanza")[0].innerHTML = "";
-            x[i].style.display = "";
+            x[i].style.display = "list-item";
         } else {
             x[i].style.display = "none";
         }
+    }
+    var err = document.getElementById('error');
+    if (empty) {
+        err.innerHTML = "Nessun risultato trovato.";
+    } else {
+        err.innerHTML = "";
     }
 }
 
@@ -31,7 +39,8 @@ function geoloc() {
         };
         navigator.geolocation.getCurrentPosition(sortAndDisplay, showError, options);
     } else {
-        alert('Geolocation is not supported with this browser');
+        var err = document.getElementById('error');
+        err.innerHTML = "La geolocalizzazione non è supportata da questo browser.";
     }
 }
 
@@ -40,6 +49,7 @@ function sortAndDisplay(position) {
     var longitude = position.coords.longitude;
     var limite = document.getElementById("limitdistance").value;
     var x = document.getElementsByClassName("locale");
+    var empty = true;
     for(var i = 0; i < x.length; i++) {
         var pDistanza = x[i].getElementsByClassName("distanza")[0];
         var localLat = x[i].getElementsByClassName("lat")[0].innerHTML;
@@ -47,27 +57,38 @@ function sortAndDisplay(position) {
         var metri = distance(latitude, longitude, localLat, localLong);
         if (metri <= limite) {
             pDistanza.innerHTML = metri + " metri";
-            x[i].style.display = "";
+            x[i].style.display = "list-item";
+            empty = false;
         } else {
             x[i].style.display = "none";
         }
+    }
+    var err = document.getElementById('error');
+    if (empty) {
+        err.innerHTML = "Nessun risultato trovato.";
+    } else {
+        err.innerHTML = "";
     }
 }
 
 function showError(error) {
     var err = document.getElementById('error');
+    var x = document.getElementsByClassName("locale");
+    for(var i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
     switch (error.code) {
         case error.PERMISSION_DENIED:
-            err.innerHTML = "You denied the request for Geolocation.";
+            err.innerHTML = "È stato negato l'accesso alla geolocalizzazione.";
             break;
         case error.POSITION_UNAVAILABLE:
-            err.innerHTML = "Location information is unavailable.";
+            err.innerHTML = "Le informazioni sulla localizzazione non sono disponibili.";
             break;
         case error.TIMEOUT:
-            err.innerHTML = "The request to get user location timed out.";
+            err.innerHTML = "Timeout durante la richiesta della posizione dell'utente.";
             break;
         case error.UNKNOWN_ERROR:
-            err.innerHTML = "An unknown error occurred.";
+            err.innerHTML = "Errore, riprovare.";
             break;
     }
 }

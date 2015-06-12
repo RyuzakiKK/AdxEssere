@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <title>Adxessere-1</title>
+      <link href="style.css" rel="stylesheet" type="text/css"/>
+   </head>
+   <body>
+      <header>
+         <h1>Elaborato di Sistemi Multimediali - Adxessere-1</h1>
+      </header>
+      <div id="container">
+         <section id="controls">
+            <div>
+               <h1>Ricerca per parola chiave</h1>
+               <label for="keyword">Keyword</label>
+               <input name="keyword" id="keyword" type="text" placeholder="keyword"/>
+               <button onclick="keyword()">Cerca</button>
+            </div>
+            <div>
+               <h1>Ricerca nelle vicinanze (GPS)</h1>
+               <label for="limitdistance">Limita la distanza a metri</label>
+               <select name="limitdistance" id="limitdistance">
+                  <option value="80000">80000</option>
+                  <option value="5000">5000</option>
+                  <option value="1000">1000</option>
+                  <option value="500">500</option>
+                  <option value="200">200</option>
+               </select>
+               <button onclick="geoloc()">Cerca</button>
+            </div>
+         </section>
+         <section id="searchresult">
+            <p id="error"/>
+            <ul>
+               <li id="01" class="locale">
+                  <p class="lat">44.137734</p>
+                  <p class="long">12.240359</p>
+                  <p class="distanza"/>
+                  <p class="keyword">Ristorante</p>
+                  <p class="keyword">Pizzeria</p>
+                  <p class="keyword">Rocca</p>
+                  <p>Ristorante Pizzeria La Rocca</p>
+                  <a href="http://www.pizzerialarocca.net/">http://www.pizzerialarocca.net/</a>
+               </li>
+               <li id="02" class="locale">
+                  <p class="lat">44.140845</p>
+                  <p class="long">12.247547</p>
+                  <p class="distanza"/>
+                  <p class="keyword">Pizzeria</p>
+                  <p class="keyword">Lucullo</p>
+                  <p>Pizzeria Lucullo</p>
+               </li>
+               <li id="03" class="locale">
+                  <p class="lat">44.143809</p>
+                  <p class="long">12.248674</p>
+                  <p class="distanza"/>
+                  <p class="keyword">Ristorante</p>
+                  <p class="keyword">America</p>
+                  <p class="keyword">Graffiti</p>
+                  <p>America Graffiti Diner Restaurant Cesena</p>
+                  <a href="http://www.americagraffiti.it/">http://www.americagraffiti.it/</a>
+               </li>
+               <li id="04" class="locale">
+                  <p class="lat">44.135037</p>
+                  <p class="long">12.238410</p>
+                  <p class="distanza"/>
+                  <p class="keyword">Ristorante</p>
+                  <p class="keyword">Pizzeria</p>
+                  <p class="keyword">Stalla</p>
+                  <p>Pizzeria La Stalla</p>
+                  <a href="http://www.ristorantelastalla.eu/">http://www.ristorantelastalla.eu/</a>
+               </li>
+               <li id="05" class="locale">
+                  <p class="lat">44.135037</p>
+                  <p class="long">12.238410</p>
+                  <p class="distanza"/>
+                  <p class="keyword">Pizzeria</p>
+                  <p class="keyword">Portico</p>
+                  <p>Pizzeria Il Portico</p>
+               </li>
+               <li id="06" class="locale">
+                  <p class="lat">44.145927</p>
+                  <p class="long">12.214123</p>
+                  <p class="distanza"/>
+                  <p class="keyword">Ristorante</p>
+                  <p class="keyword">Pizzeria</p>
+                  <p class="keyword">Castello</p>
+                  <p>Ristorante Quel Castello Di Diegaro</p>
+                  <a href="http://www.quelcastello.it/it/">http://www.quelcastello.it/it/</a>
+               </li>
+               <li id="07" class="locale">
+                  <p class="lat">44.138042</p>
+                  <p class="long">12.238713</p>
+                  <p class="distanza"/>
+                  <p class="keyword">Gelateria</p>
+                  <p class="keyword">Marilena</p>
+                  <p>Gelateria Marilena</p>
+               </li>
+               <li id="08" class="locale">
+                  <p class="lat">44.136302</p>
+                  <p class="long">12.248637</p>
+                  <p class="distanza"/>
+                  <p class="keyword">Gelateria</p>
+                  <p class="keyword">Puro</p>
+                  <p class="keyword">Bio</p>
+                  <p>Puro e Bio</p>
+                  <a href="http://gelatieri-indipendenti.com/">http://gelatieri-indipendenti.com/</a>
+               </li>
+               <li id="09" class="locale">
+                  <p class="lat">44.142631</p>
+                  <p class="long">12.251201</p>
+                  <p class="distanza"/>
+                  <p class="keyword">Gelateria</p>
+                  <p class="keyword">Cremeria</p>
+                  <p>La Cremeria</p>
+                  <a href="http://gelatieri-indipendenti.com/">http://gelatieri-indipendenti.com/</a>
+               </li>
+               <li id="10" class="locale">
+                  <p class="lat">44.141830</p>
+                  <p class="long">12.239507</p>
+                  <p class="distanza"/>
+                  <p class="keyword">Bar</p>
+                  <p class="keyword">Ex Cafe</p>
+                  <p>L'Ex Cafe'</p>
+                  <a href="http://www.excafe.it/">http://www.excafe.it/</a>
+               </li>
+               <li id="11" class="locale">
+                  <p class="lat">44.135855</p>
+                  <p class="long">12.247575</p>
+                  <p class="distanza"/>
+                  <p class="keyword">Bar</p>
+                  <p class="keyword">Roma</p>
+                  <p>Bar Roma</p>
+               </li>
+               <li id="12" class="locale">
+                  <p class="lat">44.137888</p>
+                  <p class="long">12.243637</p>
+                  <p class="distanza"/>
+                  <p class="keyword">Bar</p>
+                  <p class="keyword">Capitano</p>
+                  <p>Bar Capitano</p>
+                  <a href="http://www.barcapitano.it/">http://www.barcapitano.it/</a>
+               </li>
+            </ul>
+         </section>
+      </div>
+      <footer>
+         <p>Eugenio Severi</p>
+         <p>Ludovico de Nittis</p>
+      </footer>
+      <script type="text/javascript" src="myscript.js">javascript</script>
+   </body>
+</html>
