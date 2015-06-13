@@ -1,6 +1,6 @@
 # AdxEssere
 
-This is an University project for the Mobile Systems course.
+This is an University project for the Multimedia Systems course.
 
 This repository contains the source code of a site that allows to find local facilities.
 
