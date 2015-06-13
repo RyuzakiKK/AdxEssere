@@ -8,4 +8,4 @@ The file `Database.xml` has the list of the locals. The xml follow the structure
 
 `Index.xsl` generate the `Index.html`.
 
-At the end inside `myscript.js` there are the scripts for the search, for get the position of the user and calculate the distance.
+Inside `myscript.js` there are the scripts for the search, for get the position of the user and calculate the distance.
