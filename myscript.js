@@ -1,7 +1,7 @@
 function keyword() {
     var word = document.getElementById("keyword").value;
     if(!word.match(/\S/)) {
-        alert ('Il campo vuoto non è ammesso');
+        alert ('An empty search is not allowed');
         return;
     }
     var x = document.getElementsByClassName("locale");
@@ -24,7 +24,7 @@ function keyword() {
     }
     var err = document.getElementById('error');
     if (empty) {
-        err.innerHTML = "Nessun risultato trovato.";
+        err.innerHTML = "No results found.";
     } else {
         err.innerHTML = "";
     }
@@ -40,7 +40,7 @@ function geoloc() {
         navigator.geolocation.getCurrentPosition(sortAndDisplay, showError, options);
     } else {
         var err = document.getElementById('error');
-        err.innerHTML = "La geolocalizzazione non è supportata da questo browser.";
+        err.innerHTML = "Geolocation is not supported with this browser.";
     }
 }
 
@@ -65,7 +65,7 @@ function sortAndDisplay(position) {
     }
     var err = document.getElementById('error');
     if (empty) {
-        err.innerHTML = "Nessun risultato trovato.";
+        err.innerHTML = "No results found.";
     } else {
         err.innerHTML = "";
     }
@@ -79,16 +79,16 @@ function showError(error) {
     }
     switch (error.code) {
         case error.PERMISSION_DENIED:
-            err.innerHTML = "È stato negato l'accesso alla geolocalizzazione.";
+            err.innerHTML = "You denied the request for Geolocation.";
             break;
         case error.POSITION_UNAVAILABLE:
-            err.innerHTML = "Le informazioni sulla localizzazione non sono disponibili.";
+            err.innerHTML = "Location information unavailable.";
             break;
         case error.TIMEOUT:
-            err.innerHTML = "Timeout durante la richiesta della posizione dell'utente.";
+            err.innerHTML = "The request for Geolocation timed out.";
             break;
         case error.UNKNOWN_ERROR:
-            err.innerHTML = "Errore, riprovare.";
+            err.innerHTML = "Error, retry.";
             break;
     }
 }

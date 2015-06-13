@@ -58,11 +58,14 @@
                             <p><xsl:value-of select="."/></p>
                         </xsl:for-each>
                         <xsl:for-each select="linkEsterno">
-                            <a>
+                            <p><a>
                                 <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
                                 <xsl:value-of select="."/>
-                            </a>
+                            </a></p>
                         </xsl:for-each>
+                        <p><a>
+                            <xsl:attribute name="href">http://www.google.com/maps/place/<xsl:value-of select="coordinateGPSlat"/>,<xsl:value-of select="coordinateGPSlong"/></xsl:attribute>Link a Google Maps</a>
+                        </p>
                         </li>
                     </xsl:for-each>
                 </ul>

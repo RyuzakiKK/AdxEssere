@@ -2,8 +2,8 @@
 <!DOCTYPE contenuti SYSTEM "Database.dtd">
 <contenuti>
   <contenuto id="01">
-    <coordinateGPSlat>44.137734</coordinateGPSlat>
-    <coordinateGPSlong>12.240359</coordinateGPSlong>
+    <coordinateGPSlat>44.137689</coordinateGPSlat>
+    <coordinateGPSlong>12.240674</coordinateGPSlong>
     <paroleChiave>Ristorante</paroleChiave>
     <paroleChiave>Pizzeria</paroleChiave>
     <paroleChiave>Rocca</paroleChiave>
