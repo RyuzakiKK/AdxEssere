@@ -1,4 +1,5 @@
 function keyword() {
+    /* Search with the keyword provided by the user */
     var word = document.getElementById("keyword").value;
     if(!word.match(/\S/)) {
         alert ('An empty search is not allowed');
@@ -6,6 +7,7 @@ function keyword() {
     }
     var x = document.getElementsByClassName("locale");
     var empty = true;
+    // Iterate every locale present in the html
     for(var i = 0; i < x.length; i++) {
         var pKeyword = x[i].getElementsByClassName("keyword");
         var matched = false;
@@ -31,23 +33,25 @@ function keyword() {
 }
 
 function geoloc() {
+    /* Get the user location and call displayNearLocalesy */
     if (navigator.geolocation) {
         var options = {
             enableHighAccuracy: true,
             timeout: 30000,
             maximumAge: 0
         };
-        navigator.geolocation.getCurrentPosition(sortAndDisplay, showError, options);
+        navigator.geolocation.getCurrentPosition(displayNearLocales, showError, options);
     } else {
         var err = document.getElementById('error');
         err.innerHTML = "Geolocation is not supported with this browser.";
     }
 }
 
-function sortAndDisplay(position) {
+function displayNearLocales(position) {
+    /* Chenge the style.display property of the the locales for display the near ones */
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
-    var limite = document.getElementById("limitdistance").value;
+    var limit = document.getElementById("limitdistance").value;
     var x = document.getElementsByClassName("locale");
     var empty = true;
     for(var i = 0; i < x.length; i++) {
@@ -55,7 +59,7 @@ function sortAndDisplay(position) {
         var localLat = x[i].getElementsByClassName("lat")[0].innerHTML;
         var localLong = x[i].getElementsByClassName("long")[0].innerHTML;
         var metri = distance(latitude, longitude, localLat, localLong);
-        if (metri <= limite) {
+        if (metri <= limit) {
             pDistanza.innerHTML = metri + " metri";
             x[i].style.display = "list-item";
             empty = false;
@@ -72,6 +76,7 @@ function sortAndDisplay(position) {
 }
 
 function showError(error) {
+    /* Called if an error occurred during the request of the position */
     var err = document.getElementById('error');
     var x = document.getElementsByClassName("locale");
     for(var i = 0; i < x.length; i++) {
@@ -94,6 +99,7 @@ function showError(error) {
 }
 
 function distance(lat1, lng1, lat2, lng2) {
+    /* Return the distance in meters from two coordinates */
     var earthRadius = 6371000;
     var dlat1 = toRadians(lat1);
     var dlat2 = toRadians(lat2);
@@ -107,5 +113,6 @@ function distance(lat1, lng1, lat2, lng2) {
 }
 
 function toRadians(angle) {
+    /* Deg to rad */
     return angle * (Math.PI / 180);
 }
