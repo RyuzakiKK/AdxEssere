@@ -51,7 +51,7 @@ div > label  {
     padding: 15px;
 }
 
-#searchresult > ul > li > a {
+#searchresult > ul > li > p > a {
     text-decoration: none;
 }
 
