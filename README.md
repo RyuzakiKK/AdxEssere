@@ -2,10 +2,10 @@
 
 This is an University project for the Mobile Systems course.
 
-In this repository is available the source code of a site that allow to find locals nearby the user.
+This repository contains the source code of a site that allows to find local facilities.
 
-The file `Database.xml` has the list of the locals. The xml follow the structure of `Database.dtd`.
+The file `Database.xml` contains the list of the facilities. The xml follows the structure specified in `Database.dtd`.
 
-`Index.xsl` generate the `Index.html`.
+`index.xsl` is the XSLT transofmation which generates the `index.html`.
 
-Inside `myscript.js` there are the scripts for the search, for get the position of the user and calculate the distance.
+`myscript.js` contains scripts for the search, for getting the user's position and calculating the distance.
