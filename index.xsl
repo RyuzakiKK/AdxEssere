@@ -27,7 +27,7 @@
                     <h1>Ricerca per parola chiave</h1>
                     <label for="keyword">Keyword</label>
                     <input name="keyword" id="keyword" type="text" placeholder="keyword"/>
-                    <button onclick="keyword()">Cerca</button>
+                    <button onclick="keyword(false)">Cerca</button>
                 </div>
                 <div>
                     <h1>Ricerca nelle vicinanze (GPS)</h1>
