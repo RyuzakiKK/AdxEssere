@@ -23,6 +23,11 @@
         </header>
         <div id="container">
             <section id="controls">
+                
+                <xsl:for-each select="distinct-values(contenuti/contenuto/paroleChiave)">
+                    <p><xsl:value-of select="."/></p>
+                </xsl:for-each>
+                
                 <div>
                     <h1>Ricerca per parola chiave</h1>
                     <label for="keyword">Keyword</label>
