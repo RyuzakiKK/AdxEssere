@@ -1,4 +1,48 @@
-function keyword() {
+function sortElements(byDistance) {
+    /* Sort items using a sortable array */
+    var itemsToSort = document.getElementsByClassName("locale");
+    var data = [], order = [], item, placeHolder;
+    for (var i = 0; i < itemsToSort.length; i++) {
+        // Discard the hidden items
+        if (itemsToSort[i].style.display == "list-item") {
+            item = itemsToSort[i];
+            // save position of item by inserting a placeholder
+            placeHolder = document.createElement(item.tagName);
+            item.parentNode.insertBefore(placeHolder, item);
+            order.push(placeHolder);
+            // save item and value
+            if (byDistance) {
+                data.push({obj: item, value: item.getElementsByClassName("distanza")[0].innerHTML});
+            } else {
+                if (item.getElementsByClassName("desc").length > 0) {
+                    data.push({obj: item, value: item.getElementsByClassName("desc")[0].innerHTML});
+                } else {
+                    data.push({obj: item, value: ""});
+                }
+            }
+        }
+    }
+    // sort the item array by the value
+    data.sort(function(a, b) {
+        return(a.value.localeCompare(b.value));
+    });
+    // Insert sorted items
+    for (var i = 0; i < data.length; i++) {
+        item = data[i].obj;
+        placeHolder = order[i];
+        placeHolder.parentNode.insertBefore(item, placeHolder);
+        // remove placeholder
+        placeHolder.parentNode.removeChild(placeHolder);
+    }
+}
+
+function PositionAndKeyword() {
+    /* Search with keyword and the user location */
+    geoloc();
+    keyword(true);
+}
+
+function keyword(onlyNear) {
     /* Search with the keyword provided by the user */
     var word = document.getElementById("keyword").value;
     if(!word.match(/\S/)) {
@@ -14,12 +58,12 @@ function keyword() {
         for (var j = 0; j < pKeyword.length && !matched; j++) {
             if (pKeyword[j].innerHTML.toLowerCase().indexOf(word.toLowerCase()) > -1) {
                 matched = true;
-                empty = false;
             }
         }
-        if (matched) {
-            x[i].getElementsByClassName("distanza")[0].innerHTML = "";
-            x[i].style.display = "list-item";
+        if (matched && (!onlyNear || (onlyNear && x[i].style.display == "list-item") )) {
+                x[i].getElementsByClassName("distanza")[0].innerHTML = "";
+                x[i].style.display = "list-item";
+                empty = false;
         } else {
             x[i].style.display = "none";
         }
