@@ -55,7 +55,7 @@
                             <p class="keyword"><xsl:value-of select="."/></p>
                         </xsl:for-each>
                         <xsl:for-each select="testoDescrittivo">
-                            <p><xsl:value-of select="."/></p>
+                            <p class="desc"><xsl:value-of select="."/></p>
                         </xsl:for-each>
                         <xsl:for-each select="linkEsterno">
                             <p><a>
