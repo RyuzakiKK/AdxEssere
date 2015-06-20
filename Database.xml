@@ -8,6 +8,7 @@
     <paroleChiave>Pizzeria</paroleChiave>
     <paroleChiave>Rocca</paroleChiave>
     <testoDescrittivo>Ristorante Pizzeria La Rocca</testoDescrittivo>
+    <testoDescrittivo>Situata nel centro di Cesena, la location è stata ristrutturata ed inaugurata nell’anno 2013. La gestione, genuinamente famigliare, ha deciso di puntare sulla cucina tipica romagnola con l’utilizzo solo di prodotti freschi e di stagione. I prodotti sono preparati a mano così come vuole la tradizione, i vini sono serviti da personale esperto ed adeguatamente formato e per ultimo, ma non meno importante, le pizze sono preparate da pizzaioli preparati per farvi gustare pizze della vera tradizione campana.</testoDescrittivo>
     <linkEsterno>http://www.pizzerialarocca.net/</linkEsterno>
   </contenuto>
   <contenuto id="02">
@@ -16,6 +17,7 @@
     <paroleChiave>Pizzeria</paroleChiave>
     <paroleChiave>Lucullo</paroleChiave>
     <testoDescrittivo>Pizzeria Lucullo</testoDescrittivo>
+    <testoDescrittivo>Situato nel centro di Cesena, il locale è famoso per la preparazione della "vera pizza napoletana".</testoDescrittivo>
   </contenuto>
   <contenuto id="03">
     <coordinateGPSlat>44.143809</coordinateGPSlat>
@@ -24,6 +26,7 @@
     <paroleChiave>America</paroleChiave>
     <paroleChiave>Graffiti</paroleChiave>
     <testoDescrittivo>America Graffiti Diner Restaurant Cesena</testoDescrittivo>
+    <testoDescrittivo>America Graffiti inaugura il primo ristorante a Forlì nel febbraio 2008, nato dalle passioni degli ideatori: la buona cucina e gli Stati Uniti d’America.</testoDescrittivo>
     <linkEsterno>http://www.americagraffiti.it/</linkEsterno>
   </contenuto>
   <contenuto id="04">
@@ -33,6 +36,7 @@
     <paroleChiave>Pizzeria</paroleChiave>
     <paroleChiave>Stalla</paroleChiave>
     <testoDescrittivo>Pizzeria La Stalla</testoDescrittivo>
+    <testoDescrittivo>Il Ristorante Pizzeria La Stalla, situato nel centro di Cesena proprio ai piedi della splendida Rocca Malatestiana, è un locale ricavato da una vecchia stalla adibita al ricovero di animali. Ristrutturata negli anni ’90, è diventata un punto di ritrovo di golosi sia della cucina tipica romagnola che di quella nazionale ed internazionale con una ampissima scelta di piatti di carne e di pesce.</testoDescrittivo>
     <linkEsterno>http://www.ristorantelastalla.eu/</linkEsterno>
   </contenuto>
   <contenuto id="05">
@@ -41,6 +45,7 @@
     <paroleChiave>Pizzeria</paroleChiave>
     <paroleChiave>Portico</paroleChiave>
     <testoDescrittivo>Pizzeria Il Portico</testoDescrittivo>
+    <testoDescrittivo>Il ristorante il Portico è sinonimo di ricerca per la buona cucina. Il Portico ha una lunga tradizione e cultura culinaria da oltre 20 anni, grazie alla continua ricerca di materie prime selezionate.</testoDescrittivo>
   </contenuto>
   <contenuto id="06">
     <coordinateGPSlat>44.145927</coordinateGPSlat>
@@ -49,6 +54,7 @@
     <paroleChiave>Pizzeria</paroleChiave>
     <paroleChiave>Castello</paroleChiave>
     <testoDescrittivo>Ristorante Quel Castello Di Diegaro</testoDescrittivo>
+    <testoDescrittivo>Su un colle del 'dolce paese', con il mare lontano, circondato da piante secolari, un maniero riportato agli antichi splendori: dal 1980 il locale, punto di riferimento per la scena enogastronomica di questo angolo di Romagna, ma anche luogo dove trascorrere la notte nelle eleganti suite.</testoDescrittivo>
     <linkEsterno>http://www.quelcastello.it/it/</linkEsterno>
   </contenuto>
   <contenuto id="07">
@@ -65,6 +71,7 @@
     <paroleChiave>Puro</paroleChiave>
     <paroleChiave>Bio</paroleChiave>
     <testoDescrittivo>Puro e Bio</testoDescrittivo>
+    <testoDescrittivo>L’utilizzo di ingredienti biologici e naturali lavorati con nuove tecniche per esaltarne le qualità’ e’ stato il punto di partenza dal quale abbiamo costruito il nostro progetto.</testoDescrittivo>
     <linkEsterno>http://gelatieri-indipendenti.com/</linkEsterno>
   </contenuto>
   <contenuto id="09">
@@ -73,7 +80,8 @@
     <paroleChiave>Gelateria</paroleChiave>
     <paroleChiave>Cremeria</paroleChiave>
     <testoDescrittivo>La Cremeria</testoDescrittivo>
-    <linkEsterno>http://gelatieri-indipendenti.com/</linkEsterno>
+    <testoDescrittivo>Il buon gelato artigianale a Cesena.</testoDescrittivo>
+    <linkEsterno>http://www.lacremeriacesena.it/</linkEsterno>
   </contenuto>
   <contenuto id="10">
     <coordinateGPSlat>44.141830</coordinateGPSlat>
@@ -81,6 +89,7 @@
     <paroleChiave>Bar</paroleChiave>
     <paroleChiave>Ex Cafe</paroleChiave>
     <testoDescrittivo>L'Ex Cafe'</testoDescrittivo>
+    <testoDescrittivo>Punto di ritrovo per studenti, annesso ad un aula studio.</testoDescrittivo>
     <linkEsterno>http://www.excafe.it/</linkEsterno>
   </contenuto>
   <contenuto id="11">
@@ -89,6 +98,7 @@
     <paroleChiave>Bar</paroleChiave>
     <paroleChiave>Roma</paroleChiave>
     <testoDescrittivo>Bar Roma</testoDescrittivo>
+    <testoDescrittivo></testoDescrittivo>
   </contenuto>
   <contenuto id="12">
     <coordinateGPSlat>44.137888</coordinateGPSlat>
@@ -96,6 +106,7 @@
     <paroleChiave>Bar</paroleChiave>
     <paroleChiave>Capitano</paroleChiave>
     <testoDescrittivo>Bar Capitano</testoDescrittivo>
+    <testoDescrittivo>Professionalità, disopnibilità, eleganza al servizio del cliente in ogni momento della giornata: per un appuntamento importante, per assaporare un momento di relax, per gustare un ottimo caffè. Per voi in pieno centro a Cesena.</testoDescrittivo>
     <linkEsterno>http://www.barcapitano.it/</linkEsterno>
   </contenuto>
 </contenuti>
