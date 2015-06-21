@@ -1,3 +1,5 @@
+var combined = false;
+
 function sortElements() {
     /* Sort items using a sortable array */
     var itemsToSort = document.getElementsByClassName("locale");
@@ -40,7 +42,8 @@ function sortElements() {
 function PositionAndKeyword() {
     /* Search with keyword and the user location */
     geoloc();
-    keyword(true);
+    //keyword(true);
+    combined = true;
 }
 
 function keyword(onlyNear) {
@@ -60,10 +63,12 @@ function keyword(onlyNear) {
                 matched = true;
             }
         }
-        if (matched && (!onlyNear || (onlyNear && x[i].style.display == "list-item") )) {
+        if (matched && !onlyNear) {
                 x[i].getElementsByClassName("distanza")[0].innerHTML = "";
                 x[i].style.display = "list-item";
                 empty = false;
+        } else if (matched && onlyNear && x[i].style.display == "list-item") {
+            empty = false;
         } else {
             x[i].style.display = "none";
         }
@@ -116,11 +121,16 @@ function displayNearLocales(position) {
         err.innerHTML = "No results found.";
     } else {
         err.innerHTML = "";
+        if (combined) {
+            keyword(true);
+        }
     }
+    combined = false;
 }
 
 function showError(error) {
     /* Called if an error occurred during the request of the position */
+    combined = false;
     var err = document.getElementById('error');
     var x = document.getElementsByClassName("locale");
     for(var i = 0; i < x.length; i++) {
