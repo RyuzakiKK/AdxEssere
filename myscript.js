@@ -1,4 +1,4 @@
-function sortElements(byDistance) {
+function sortElements() {
     /* Sort items using a sortable array */
     var itemsToSort = document.getElementsByClassName("locale");
     var data = [], order = [], item, placeHolder;
@@ -11,7 +11,8 @@ function sortElements(byDistance) {
             item.parentNode.insertBefore(placeHolder, item);
             order.push(placeHolder);
             // save item and value
-            if (byDistance) {
+            var sorting = document.getElementById("sortingoptions").value;
+            if (sorting == 1) {
                 data.push({obj: item, value: item.getElementsByClassName("distanza")[0].innerHTML});
             } else {
                 if (item.getElementsByClassName("desc").length > 0) {
@@ -44,10 +45,9 @@ function PositionAndKeyword() {
 
 function keyword(onlyNear) {
     /* Search with the keyword provided by the user */
-    var word = document.getElementById("keyword").value;
+    var word = document.getElementById("keywordtext").value;
     if(!word.match(/\S/)) {
-        alert ('An empty search is not allowed');
-        return;
+        word = document.getElementById("keywordlist").value;
     }
     var x = document.getElementsByClassName("locale");
     var empty = true;

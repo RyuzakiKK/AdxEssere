@@ -23,22 +23,26 @@
         </header>
         <div id="container">
             <section id="controls">
-                
-                <xsl:for-each select="distinct-values(contenuti/contenuto/paroleChiave)">
-                    <p><xsl:value-of select="."/></p>
-                </xsl:for-each>
-                
                 <div>
                     <h1>Ricerca per parola chiave</h1>
-                    <label for="keyword">Keyword</label>
-                    <input name="keyword" id="keyword" type="text" placeholder="keyword"/>
+                    <label for="keywordtext">Keyword libera</label>
+                    <input name="keywordtext" id="keywordtext" type="text" placeholder="keyword"/>
+                    <label for="keywordcombobox">oppure una tra</label>
+                    <select name="keywordcombobox" id="keywordlist">
+                        <xsl:for-each select="distinct-values(contenuti/contenuto/paroleChiave)">
+                            <option>
+                                <xsl:attribute name="value"><xsl:value-of select="."/></xsl:attribute>
+                                <xsl:value-of select="."/>
+                            </option>
+                        </xsl:for-each>
+                    </select>
                     <button onclick="keyword(false)">Cerca</button>
                 </div>
                 <div>
                     <h1>Ricerca nelle vicinanze (GPS)</h1>
                     <label for="limitdistance">Limita la distanza a metri</label>
                     <select name="limitdistance" id="limitdistance">
-                        <option value="80000">80000</option> <!-- Debug -->
+                        <option value="80000">80000</option>
                         <option value="5000">5000</option>
                         <option value="1000">1000</option>
                         <option value="500">500</option>
@@ -46,8 +50,21 @@
                     </select>
                     <button onclick="geoloc()">Cerca</button>
                 </div>
+                <div>
+	                <h1>Ricerca combinata (parola chiave + GPS)
+		            <button onclick="PositionAndKeyword()">Cerca</button>
+	                </h1>
+                </div>
             </section>
             <section id="searchresult">
+	            <p>
+	                <label for="sortingoptions">Ordina i risultati per</label>
+	                <select name="sortingoptions" id="sortingoptions">
+	                    <option value="0">nome</option>
+	                    <option value="1">distanza</option>
+	                </select>
+	                <button onclick="sortElements()">Ordina</button>
+                </p>
                 <p id="error"></p>
                 <ul>
                     <xsl:for-each select="contenuti/contenuto">

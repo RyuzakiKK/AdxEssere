@@ -13,15 +13,36 @@
          <section id="controls">
             <div>
                <h1>Ricerca per parola chiave</h1>
-               <label for="keyword">Keyword</label>
-               <input name="keyword" id="keyword" type="text" placeholder="keyword"/>
-               <button onclick="keyword()">Cerca</button>
+               <label for="keywordtext">Keyword libera</label>
+               <input name="keywordtext" id="keywordtext" type="text" placeholder="keyword"/>
+               <label for="keywordcombobox">oppure una tra</label>
+               <select name="keywordcombobox" id="keywordlist">
+                  <option value="Ristorante">Ristorante</option>
+                  <option value="Pizzeria">Pizzeria</option>
+                  <option value="Rocca">Rocca</option>
+                  <option value="Lucullo">Lucullo</option>
+                  <option value="America">America</option>
+                  <option value="Graffiti">Graffiti</option>
+                  <option value="Stalla">Stalla</option>
+                  <option value="Portico">Portico</option>
+                  <option value="Castello">Castello</option>
+                  <option value="Gelateria">Gelateria</option>
+                  <option value="Marilena">Marilena</option>
+                  <option value="Puro">Puro</option>
+                  <option value="Bio">Bio</option>
+                  <option value="Cremeria">Cremeria</option>
+                  <option value="Bar">Bar</option>
+                  <option value="Ex Cafe">Ex Cafe</option>
+                  <option value="Roma">Roma</option>
+                  <option value="Capitano">Capitano</option>
+               </select>
+               <button onclick="keyword(false)">Cerca</button>
             </div>
             <div>
                <h1>Ricerca nelle vicinanze (GPS)</h1>
                <label for="limitdistance">Limita la distanza a metri</label>
                <select name="limitdistance" id="limitdistance">
-                  <option value="80000">80000</option>
+                  <option value="145000">80000</option>
                   <option value="5000">5000</option>
                   <option value="1000">1000</option>
                   <option value="500">500</option>
@@ -29,8 +50,21 @@
                </select>
                <button onclick="geoloc()">Cerca</button>
             </div>
+            <div>
+               <h1>Ricerca combinata (parola chiave + GPS)
+		            <button onclick="PositionAndKeyword()">Cerca</button>
+               </h1>
+            </div>
          </section>
          <section id="searchresult">
+            <p>
+               <label for="sortingoptions">Ordina i risultati per</label>
+               <select name="sortingoptions" id="sortingoptions">
+                  <option value="0">nome</option>
+                  <option value="1">distanza</option>
+               </select>
+               <button onclick="sortElements()">Ordina</button>
+            </p>
             <p id="error"/>
             <ul>
                <li id="01" class="locale">
@@ -40,7 +74,8 @@
                   <p class="keyword">Ristorante</p>
                   <p class="keyword">Pizzeria</p>
                   <p class="keyword">Rocca</p>
-                  <p>Ristorante Pizzeria La Rocca</p>
+                  <p class="desc">Ristorante Pizzeria La Rocca</p>
+                  <p class="desc">Situata nel centro di Cesena, la location è stata ristrutturata ed inaugurata nell’anno 2013. La gestione, genuinamente famigliare, ha deciso di puntare sulla cucina tipica romagnola con l’utilizzo solo di prodotti freschi e di stagione. I prodotti sono preparati a mano così come vuole la tradizione, i vini sono serviti da personale esperto ed adeguatamente formato e per ultimo, ma non meno importante, le pizze sono preparate da pizzaioli preparati per farvi gustare pizze della vera tradizione campana.</p>
                   <p>
                      <a href="http://www.pizzerialarocca.net/">http://www.pizzerialarocca.net/</a>
                   </p>
@@ -54,7 +89,8 @@
                   <p class="distanza"/>
                   <p class="keyword">Pizzeria</p>
                   <p class="keyword">Lucullo</p>
-                  <p>Pizzeria Lucullo</p>
+                  <p class="desc">Pizzeria Lucullo</p>
+                  <p class="desc">Situato nel centro di Cesena, il locale è famoso per la preparazione della "vera pizza napoletana".</p>
                   <p>
                      <a href="http://www.google.com/maps/place/44.140845,12.247547">Link a Google Maps</a>
                   </p>
@@ -66,7 +102,8 @@
                   <p class="keyword">Ristorante</p>
                   <p class="keyword">America</p>
                   <p class="keyword">Graffiti</p>
-                  <p>America Graffiti Diner Restaurant Cesena</p>
+                  <p class="desc">America Graffiti Diner Restaurant Cesena</p>
+                  <p class="desc">America Graffiti inaugura il primo ristorante a Forlì nel febbraio 2008, nato dalle passioni degli ideatori: la buona cucina e gli Stati Uniti d’America.</p>
                   <p>
                      <a href="http://www.americagraffiti.it/">http://www.americagraffiti.it/</a>
                   </p>
@@ -81,7 +118,8 @@
                   <p class="keyword">Ristorante</p>
                   <p class="keyword">Pizzeria</p>
                   <p class="keyword">Stalla</p>
-                  <p>Pizzeria La Stalla</p>
+                  <p class="desc">Pizzeria La Stalla</p>
+                  <p class="desc">Il Ristorante Pizzeria La Stalla, situato nel centro di Cesena proprio ai piedi della splendida Rocca Malatestiana, è un locale ricavato da una vecchia stalla adibita al ricovero di animali. Ristrutturata negli anni ’90, è diventata un punto di ritrovo di golosi sia della cucina tipica romagnola che di quella nazionale ed internazionale con una ampissima scelta di piatti di carne e di pesce.</p>
                   <p>
                      <a href="http://www.ristorantelastalla.eu/">http://www.ristorantelastalla.eu/</a>
                   </p>
@@ -95,7 +133,8 @@
                   <p class="distanza"/>
                   <p class="keyword">Pizzeria</p>
                   <p class="keyword">Portico</p>
-                  <p>Pizzeria Il Portico</p>
+                  <p class="desc">Pizzeria Il Portico</p>
+                  <p class="desc">Il ristorante il Portico è sinonimo di ricerca per la buona cucina. Il Portico ha una lunga tradizione e cultura culinaria da oltre 20 anni, grazie alla continua ricerca di materie prime selezionate.</p>
                   <p>
                      <a href="http://www.google.com/maps/place/44.135037,12.238410">Link a Google Maps</a>
                   </p>
@@ -107,7 +146,8 @@
                   <p class="keyword">Ristorante</p>
                   <p class="keyword">Pizzeria</p>
                   <p class="keyword">Castello</p>
-                  <p>Ristorante Quel Castello Di Diegaro</p>
+                  <p class="desc">Ristorante Quel Castello Di Diegaro</p>
+                  <p class="desc">Su un colle del 'dolce paese', con il mare lontano, circondato da piante secolari, un maniero riportato agli antichi splendori: dal 1980 il locale, punto di riferimento per la scena enogastronomica di questo angolo di Romagna, ma anche luogo dove trascorrere la notte nelle eleganti suite.</p>
                   <p>
                      <a href="http://www.quelcastello.it/it/">http://www.quelcastello.it/it/</a>
                   </p>
@@ -121,7 +161,7 @@
                   <p class="distanza"/>
                   <p class="keyword">Gelateria</p>
                   <p class="keyword">Marilena</p>
-                  <p>Gelateria Marilena</p>
+                  <p class="desc">Gelateria Marilena</p>
                   <p>
                      <a href="http://www.google.com/maps/place/44.138042,12.238713">Link a Google Maps</a>
                   </p>
@@ -133,7 +173,8 @@
                   <p class="keyword">Gelateria</p>
                   <p class="keyword">Puro</p>
                   <p class="keyword">Bio</p>
-                  <p>Puro e Bio</p>
+                  <p class="desc">Puro e Bio</p>
+                  <p class="desc">L’utilizzo di ingredienti biologici e naturali lavorati con nuove tecniche per esaltarne le qualità’ e’ stato il punto di partenza dal quale abbiamo costruito il nostro progetto.</p>
                   <p>
                      <a href="http://gelatieri-indipendenti.com/">http://gelatieri-indipendenti.com/</a>
                   </p>
@@ -147,9 +188,10 @@
                   <p class="distanza"/>
                   <p class="keyword">Gelateria</p>
                   <p class="keyword">Cremeria</p>
-                  <p>La Cremeria</p>
+                  <p class="desc">La Cremeria</p>
+                  <p class="desc">Il buon gelato artigianale a Cesena.</p>
                   <p>
-                     <a href="http://gelatieri-indipendenti.com/">http://gelatieri-indipendenti.com/</a>
+                     <a href="http://www.lacremeriacesena.it/">http://www.lacremeriacesena.it/</a>
                   </p>
                   <p>
                      <a href="http://www.google.com/maps/place/44.142631,12.251201">Link a Google Maps</a>
@@ -161,7 +203,8 @@
                   <p class="distanza"/>
                   <p class="keyword">Bar</p>
                   <p class="keyword">Ex Cafe</p>
-                  <p>L'Ex Cafe'</p>
+                  <p class="desc">L'Ex Cafe'</p>
+                  <p class="desc">Punto di ritrovo per studenti, annesso ad un aula studio.</p>
                   <p>
                      <a href="http://www.excafe.it/">http://www.excafe.it/</a>
                   </p>
@@ -175,7 +218,8 @@
                   <p class="distanza"/>
                   <p class="keyword">Bar</p>
                   <p class="keyword">Roma</p>
-                  <p>Bar Roma</p>
+                  <p class="desc">Bar Roma</p>
+                  <p class="desc"/>
                   <p>
                      <a href="http://www.google.com/maps/place/44.135855,12.247575">Link a Google Maps</a>
                   </p>
@@ -186,7 +230,8 @@
                   <p class="distanza"/>
                   <p class="keyword">Bar</p>
                   <p class="keyword">Capitano</p>
-                  <p>Bar Capitano</p>
+                  <p class="desc">Bar Capitano</p>
+                  <p class="desc">Professionalità, disopnibilità, eleganza al servizio del cliente in ogni momento della giornata: per un appuntamento importante, per assaporare un momento di relax, per gustare un ottimo caffè. Per voi in pieno centro a Cesena.</p>
                   <p>
                      <a href="http://www.barcapitano.it/">http://www.barcapitano.it/</a>
                   </p>

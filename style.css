@@ -55,6 +55,16 @@ div > label  {
     text-decoration: none;
 }
 
+.locale > .desc {
+    font: 24px "Verdana";
+}
+/* 
+ * Select all but the first .desc child of .locale 
+ */
+.locale > .desc ~ .desc {
+    font: 14px "Verdana";
+}
+
 .locale {
     display: none;
 }
