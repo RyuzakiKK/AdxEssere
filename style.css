@@ -31,7 +31,7 @@ div > h1 {
 }
 
 div > label  {
-    font: 16px "Georgia";
+    font: 16px "Arial";
 }
 
 #controls {
@@ -44,7 +44,7 @@ div > label  {
 
 #searchresult {
     margin: 30px;
-    font: 16px "Georgia";
+    font: 16px "Arial";
 }
 
 #searchresult > ul > li {
@@ -56,13 +56,12 @@ div > label  {
 }
 
 .locale > .desc {
-    font: 24px "Verdana";
+    font: 18px "Verdana";
 }
-/* 
- * Select all but the first .desc child of .locale 
- */
+
+/* Select all but the first .desc child of .locale */
 .locale > .desc ~ .desc {
-    font: 14px "Verdana";
+    font: 14px "Arial";
 }
 
 .locale {
@@ -79,6 +78,6 @@ ul {
 
 footer {
     margin: 10px 20px;
-    font: 14px "Georgia";
+    font: 14px "Arial";
     text-align: right;
 }
